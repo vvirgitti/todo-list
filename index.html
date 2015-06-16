@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Todo List App</title>
+<script src="./node_modules/angular/angular.js"></script>
+<script type="text/javascript" src="./js/app.js"></script>
+<script type="text/javascript" src="./js/appController.js"></script>
+</head>
+
+<body ng-app="List" ng-controller="ListController">
+
+  <div class="main" ng-repeat="list in lists">
+    <span> {{ list.task }} </span> - <span> {{ list.completion}} </span>
+  </div>
+
+</body>
+</html>
