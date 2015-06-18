@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Todo List App</title>
+<script src="./node_modules/angular/angular.js"></script>
+<script type="text/javascript" src="./js/app.js"></script>
+<script type="text/javascript" src="./js/appController.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+
+<body ng-app="List" ng-controller="ListController">
+
+  <header>
+    <div class="page-header">
+      <h1>Reminder me! <small>A todo list app to stop forgetting stuff</small></h1>
+    </div>
+  </header>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Enter a new task" ng-model="newTask">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Add!</button>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="main" ng-repeat="list in lists">
+    <span> {{ list.task }} </span> - <span> {{ list.completion}} </span>
+  </div>
+
+</body>
+</html>

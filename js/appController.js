@@ -1,12 +1,20 @@
-todoList.controller('ListController', ['$scope',function($scope){
+todoList.controller('ListController', ['$scope',function($scope) {
   $scope.lists = [
     {
       task: 'Walk the dog',
-      completion: 'Todo'
+      completion: false
     },
     {
       task: 'Cook dinner',
-      completion: 'Done'
+      completion: true
     }
   ];
+
+  $scope.addTask = function() {
+    $scope.lists.push({task:$scope.newTask, done:false});
+      $scope.newTask = "";
+  };
+
+  console.log($scope.lists);
+
 }]);
