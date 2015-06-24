@@ -24,7 +24,7 @@
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Enter a new task" ng-model="newTask">
         <span class="input-group-btn">
-          <button class="btn btn-default" type="button">Add!</button>
+          <button class="btn btn-default" type="button" id="create-task">Add!</button>
         </span>
       </div>
     </div>
@@ -33,7 +33,7 @@
   <br>
 
   <div class="main" ng-repeat="list in lists">
-    <span> {{ list.task }} </span> - <span> {{ list.completion}} </span>
+    <span> {{ list.taskName }} </span> - <span> {{ list.isDone}} </span>
   </div>
 
 </body>
